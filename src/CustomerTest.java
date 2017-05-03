@@ -38,8 +38,10 @@ public class CustomerTest
 
         String statement = "Rental Record for NewName\n" +
                 "\tTitle\t\tDays\tAmount\n" +
+                "\tTest1\t\t5\t0.0\n" +
+                "\tTest2\t\t6\t0.0\n" +
                 "Amount owed is 0.0\n" +
-                "You earned 0 frequent renter points";
+                "You earned 2 frequent renter points";
         assertEquals(statement, customer.statement());
     }
 
@@ -50,10 +52,8 @@ public class CustomerTest
 
         String statement = "Rental Record for NewName\n" +
                 "\tTitle\t\tDays\tAmount\n" +
-                "\tTest1\t\t5\t0.0\n" +
-                "\tTest2\t\t6\t0.0\n" +
                 "Amount owed is 0.0\n" +
-                "You earned 2 frequent renter points";
+                "You earned 0 frequent renter points";
         assertEquals(statement, customer.statement());
     }
 
