@@ -7,7 +7,7 @@ public class CustomerTest
     @Test
     public void addRental() throws Exception
     {
-        Movie movie = new Movie("Test", 42);
+        Movie movie = new Movie("Test", Movie.CHILDRENS);
         Rental rental = new Rental(movie, 5);
         Customer customer = new Customer("NewName");
         customer.addRental(rental);
@@ -17,7 +17,7 @@ public class CustomerTest
     @Test
     public void getName() throws Exception
     {
-        Movie movie = new Movie("Test", 42);
+        Movie movie = new Movie("Test", Movie.CHILDRENS);
         String newName = "NewName";
         Customer customer = new Customer(newName);
 
@@ -27,8 +27,8 @@ public class CustomerTest
     @Test
     public void statement() throws Exception
     {
-        Movie movie1 = new Movie("Test1", 42);
-        Movie movie2 = new Movie("Test2", 33);
+        Movie movie1 = new Movie("Test1", Movie.CHILDRENS);
+        Movie movie2 = new Movie("Test2", Movie.CHILDRENS);
         Rental rental1 = new Rental(movie1, 5);
         Rental rental2 = new Rental(movie2, 6);
         Customer customer = new Customer("NewName");
@@ -38,9 +38,9 @@ public class CustomerTest
 
         String statement = "Rental Record for NewName\n" +
                 "\tTitle\t\tDays\tAmount\n" +
-                "\tTest1\t\t5\t0.0\n" +
-                "\tTest2\t\t6\t0.0\n" +
-                "Amount owed is 0.0\n" +
+                "\tTest1\t\t5\t4.5\n" +
+                "\tTest2\t\t6\t6.0\n" +
+                "Amount owed is 10.5\n" +
                 "You earned 2 frequent renter points";
         assertEquals(statement, customer.statement());
     }

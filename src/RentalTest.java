@@ -7,7 +7,7 @@ public class RentalTest
     @Test
     public void getDaysRented() throws Exception
     {
-        Movie movie = new Movie("Test", 42);
+        Movie movie = new Movie("Test", Movie.CHILDRENS);
         int newDaysRented = 42;
         Rental rental = new Rental(movie, newDaysRented);
 
@@ -17,7 +17,7 @@ public class RentalTest
     @Test
     public void getMovie() throws Exception
     {
-        Movie movie = new Movie("Test", 42);
+        Movie movie = new Movie("Test", Movie.CHILDRENS);
         int newDaysRented = 42;
         Rental rental = new Rental(movie, newDaysRented);
 

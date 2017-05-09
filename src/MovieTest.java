@@ -5,7 +5,7 @@ public class MovieTest
     @org.junit.Test
     public void getPriceCode() throws Exception
     {
-        int priceCode = 45;
+        int priceCode = Movie.CHILDRENS;
         Movie movie = new Movie("Test", priceCode);
         assertEquals(priceCode, movie.getPriceCode());
     }
@@ -13,7 +13,7 @@ public class MovieTest
     @org.junit.Test
     public void getPriceCodeNegative() throws Exception
     {
-        int priceCode = -45;
+        int priceCode = Movie.CHILDRENS;
         Movie movie = new Movie("Test", priceCode);
         assertEquals(priceCode, movie.getPriceCode());
     }
@@ -21,7 +21,7 @@ public class MovieTest
     @org.junit.Test
     public void getPriceCodeMax() throws Exception
     {
-        int priceCode = Integer.MAX_VALUE;
+        int priceCode = Movie.CHILDRENS;
         Movie movie = new Movie("Test", priceCode);
         assertEquals(priceCode, movie.getPriceCode());
     }
@@ -29,7 +29,7 @@ public class MovieTest
     @org.junit.Test
     public void setPriceCode() throws Exception
     {
-        int priceCode = 45;
+        int priceCode = Movie.CHILDRENS;
         Movie movie = new Movie("Test", 0);
         movie.setPriceCode(priceCode);
         assertEquals(priceCode, movie.getPriceCode());
@@ -38,7 +38,7 @@ public class MovieTest
     @org.junit.Test
     public void setPriceCodeNegative() throws Exception
     {
-        int priceCode = -45;
+        int priceCode = Movie.CHILDRENS;
         Movie movie = new Movie("Test", 0);
         movie.setPriceCode(priceCode);
         assertEquals(priceCode, movie.getPriceCode());
@@ -47,7 +47,7 @@ public class MovieTest
     @org.junit.Test
     public void setPriceCodeMax() throws Exception
     {
-        int priceCode = Integer.MAX_VALUE;
+        int priceCode = Movie.CHILDRENS;
         Movie movie = new Movie("Test", 0);
         movie.setPriceCode(priceCode);
         assertEquals(priceCode, movie.getPriceCode());
